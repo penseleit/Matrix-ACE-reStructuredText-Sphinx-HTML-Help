@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Loudness profile fields explained &mdash; Matrix ACE 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Matrix ACE 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Using Matrix ACE" href="usingmatrixace.html"/>
+        <link rel="prev" title="Loudness profiles" href="loudnessprofiles.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Matrix ACE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingexplained.html">Loudness processing explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuringmatrixace.html">Configuring Matrix ACE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">The Dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingworkflows.html">Loudness processing workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingworkflowfields.html">Loudness processing workflow fields explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprofiles.html">Loudness profiles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Loudness profile fields explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usingmatrixace.html">Using Matrix ACE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencematerials.html">Reference materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="termscopyrightsandtrademarks.html">Terms, Copyrights and Trademarks</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Matrix ACE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Loudness profile fields explained</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/loudnessprofilefields.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="loudness-profile-fields-explained">
+<h1>Loudness profile fields explained<a class="headerlink" href="#loudness-profile-fields-explained" title="Permalink to this headline">¶</a></h1>
+<p>Explanations for each of the fields displayed in a Loudness Profile are explained below:</p>
+<img alt="_images/ProfilesOP59Mini.png" src="_images/ProfilesOP59Mini.png" />
+<p><strong>Maximum True Peak Level</strong></p>
+<p>The True Peak Level is <em>“the maximum (positive or negative) value of the signal waveform in the continuous time domain.”From Recommendation ITU-R BS.1770-4 (10/2015)</em></p>
+<p>The True Peak level measures loudness values between sample peaks with a specially designed algorithm. True Peak measurement reveals inter sample peaks that can be missed in the quantization process, and which have the potential to inflate the upper limit of the measured Loudness Range, resulting in a measured Program Loudness level that is skewed toward the higher value.</p>
+<p>Enabling and setting a Maximum True Peak Level, limits the maximum value of the Loudness Range to the configured value, resulting in a loudness normalization process which produces a Program Loudness level which is more representative of the audio signal.</p>
+<p>Measured in Decibels True Peak (dBTP).</p>
+<p>Enter a value between -10 and 0 dBTP. Defaults vary by standard and range between -1 to -2 dBTP.</p>
+<p><strong>Program Loudness</strong></p>
+<p>Program Loudness is <em>“the integrated loudness over the duration of a program.” From EBU – Recommendation R 128 (June 2014)</em></p>
+<p>It is a measure of the average perceived loudness of the audio signal over the duration of a program.</p>
+<p>If the Program Loudness of the input audio is known that value should be entered here. If the input audio Program Loudness value is unknown, then use the default value. Loudness processing will occur to attempt to normalize output to the Target Loudness value.</p>
+<p>Measured in Loudness Units Full Scale (LUFS). 1 LUFS = 1 LKFN (Loudness K-weighted Full Scale) = 1 decibel (1 dB).</p>
+<p>Enter a value between -50 and 0. Defaults vary by standard and generally range between -16 to -24 LUFS.</p>
+<p><strong>Target Loudness Level</strong></p>
+<p>The Target Loudness is the expected Program Loudness to be output as a product of the loudness normalization process.</p>
+<p>Program Loudness is a measure of the average perceived loudness of the audio signal over the duration of a program.</p>
+<p>The Target Loudness is a value which facilitates the exchange of audio content. Audio content should be engineered to meet Target Loudness levels so that the recipient of the audio content has the assurance that it conforms to the agreed specifications. If content which does not meet Target Loudness is used as input, a gain or loss may need to be applied to it so that it is brought into compliance with the required loudness standards.</p>
+<p>This value should be set to the expected output Target Loudness value as specified in the loudness processing standard relevant to the jurisdiction which applies to the broadcast facility. For example, In Australia the value should be set to -24 LUFS (FreeTV OP59) for Broadcasting distribution.</p>
+<p>Measured in Loudness Units Full Scale (LUFS). 1 LUFS = 1 LKFS (Loudness K-weighted Full Scale) = 1 decibel (1 dB).</p>
+<p>Enter a value between -40 and -1. Defaults vary by standard and generally range between -20 to -24 LUFS</p>
+<p><strong>Post Process Max Gain</strong></p>
+<p>This value specifies the maximum gain that can be applied during the loudness normalization process in order to meet the output Target Loudness. The gain is applied to the average level measured across the length of the program. The length of the program is determined by the value in the Post Process Seconds value.</p>
+<p>Measured in Loudness Units Full Scale (LUFS). 1 LUFS = 1 LKFS (Loudness K-weighted Full Scale) = 1 decibel (1 dB).</p>
+<p>If a value of 0 is entered, the normalization process applies gain where needed without using a limiting value.</p>
+<p><strong>Post Process Max Attenuation</strong></p>
+<p>This value specifies the maximum attenuation (reduction) that can be applied during the loudness normalization process in order to meet the output Target Loudness. The attenuation is applied to the average level measured across the length of the program. The length of the program is determined by the value in the Post Process Seconds value.</p>
+<p>Measured in Loudness Units Full Scale (LUFS). 1 LUFS = 1 LKFS (Loudness K-weighted Full Scale) = 1 decibel (1 dB).</p>
+<p>If a value of 0 is entered, the normalization process applies attenuation where needed without using a limiting value.</p>
+<p><strong>Post Process Seconds</strong></p>
+<p>This value sets the duration of the audio program used in the algorithm to apply the Program Loudness level adaptation for the audio stream.</p>
+<p>When computing a Program Loudness level for an audio file, the overall length of the file is used as the program length. When processing a continuous audio stream, the underlying loudness processor must compute a loudness level from within the stream and not a from static length file. For this reason a program length must be arbitrarily set to allow the loudness algorithm to compute a Program Loudness level from a portion of the stream temporarily stored in a memory buffer.</p>
+<p>Measured in seconds.</p>
+<p>Values typically range between 20 and 60 seconds</p>
+<p><strong>Adaptation</strong></p>
+<p>The amount of loudness adaptation applied to the incoming audio signal.</p>
+<p><em>Adaptation relies “on the state-of-the-art loudness processing provided by Linear Acoustic® APTO™.stream loudness processor. The audio signal is carefully controlled in a way that preserves the transients, sonic image and artistic intent of the source, while increasing dialog intelligibility and loudness consistency. Consequently, a dynamic and balanced mix can be tailored to any destination platform, from theatrical to mobile, without resulting in subjectively perceived compressed sound.</em></p>
+<p><em>Advanced Loudness Adaptation uses psychoacoustic analysis processes on the source file and in between any levelling steps that drive adaptive decision matrix to determine the intensity and type of processing required. This fully automated workflow ensures ideal results in terms of audio quality and standard compliance. Audio that is deemed already compliant for the intended use case will pass through the workflow untouched.” `From Linear Acoustic® APTO™.stream description. &lt;http://www.minnetonkaaudio.com/index.php?option=com_content&amp;view=article&amp;id=324&amp;Itemid=187&gt;`_</em></p>
+<p>A lower value will result in lower dynamic reduction, (a wider Loudness Range). A higher value will result in a higher dynamic reduction (a narrower Loudness Range).</p>
+<p>Measured in percentage (0%-100%).</p>
+<p><strong>Post Process Adaptation Ratio</strong></p>
+<p>The amount of gain or attenuation allowed per second during the overall program loudness normalization process. A higher value (2-6 LU) will result in faster compliance with the Target Loudness, but may introduce user-perceived gain changes. A lower value (0.5-2 LU) will contribute to a more subtle loudness normalization process to achieve the Target Loudness level, with a less perceptable change to the overall loudness.</p>
+<p>Measured in LU (Loudness Units). 1 LU = 1 dB.</p>
+<p>Suggested values should be in the range 0.5 to 2 LU.</p>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="usingmatrixace.html" class="btn btn-neutral float-right" title="Using Matrix ACE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="loudnessprofiles.html" class="btn btn-neutral" title="Loudness profiles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Peter Enseleit.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

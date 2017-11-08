@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Loudness processing workflows &mdash; Matrix ACE 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Matrix ACE 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Loudness processing workflow fields explained" href="loudnessprocessingworkflowfields.html"/>
+        <link rel="prev" title="The Dashboard" href="dashboard.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Matrix ACE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingexplained.html">Loudness processing explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuringmatrixace.html">Configuring Matrix ACE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">The Dashboard</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Loudness processing workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-parameters">Input parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#audio-elementary-stream-program-ids-pids">Audio elementary stream Program IDs (PIDs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loudness-profiles">Loudness profiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#output-parameters">Output parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-new-loudness-processing-workflow">Create a new loudness processing workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modify-a-loudness-processing-workflow">Modify a loudness processing workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-a-loudness-processing-workflow">Delete a loudness processing workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingworkflowfields.html">Loudness processing workflow fields explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprofiles.html">Loudness profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprofilefields.html">Loudness profile fields explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usingmatrixace.html">Using Matrix ACE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencematerials.html">Reference materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="termscopyrightsandtrademarks.html">Terms, Copyrights and Trademarks</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Matrix ACE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Loudness processing workflows</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/loudnessprocessingworkflows.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="loudness-processing-workflows">
+<h1>Loudness processing workflows<a class="headerlink" href="#loudness-processing-workflows" title="Permalink to this headline">¶</a></h1>
+<p>The processing of MPEG Transport Streams for loudness normalization is configured from the Matrix ACEDashboard.</p>
+<p>Each loudness processing workflow consists of:</p>
+<p>1. Values for Input parameters
+1. Program IDs for each audio elementary stream to be processed
+1. The Loudness Profile to apply to each audio elementary stream defined
+1. Values for Output parameters</p>
+<img alt="_images/Loudnessprocessingworkflowdiagram.png" src="_images/Loudnessprocessingworkflowdiagram.png" />
+<div class="section" id="input-parameters">
+<h2>Input parameters<a class="headerlink" href="#input-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Each input must be an MPEG Transport Stream (SPTS or MPTS) arriving at the server via UDP/IP (Ethernet) or ASI interfaces.</p>
+<div class="section" id="audio-elementary-stream-program-ids-pids">
+<h3>Audio elementary stream Program IDs (PIDs)<a class="headerlink" href="#audio-elementary-stream-program-ids-pids" title="Permalink to this headline">¶</a></h3>
+<p>Each audio elementary stream to be processed for loudness normalization, must be identified by its Program ID (PID).</p>
+</div>
+<div class="section" id="loudness-profiles">
+<h3>Loudness profiles<a class="headerlink" href="#loudness-profiles" title="Permalink to this headline">¶</a></h3>
+<p>A loudness profile must be selected to apply to each audio elementary stream. The loudness profile provides parameters for the loudness normalization of the audio stream.</p>
+</div>
+<div class="section" id="output-parameters">
+<h3>Output parameters<a class="headerlink" href="#output-parameters" title="Permalink to this headline">¶</a></h3>
+<p>Each input must have a corresponding output configured. Output can be configured for UDP/IP (Ethernet) or ASI interfaces.</p>
+</div>
+</div>
+<div class="section" id="create-a-new-loudness-processing-workflow">
+<h2>Create a new loudness processing workflow<a class="headerlink" href="#create-a-new-loudness-processing-workflow" title="Permalink to this headline">¶</a></h2>
+<p>The processing of MPEG Transport Streams for loudness control is configured from the Matrix ACEDashboard.</p>
+<p>A processing workflow determines how an input MPEG transport stream has some or all of its audio elementary streams processed for loudness normalization.</p>
+<p>Each workflow requires details for input, audio streams to be processed, a loudness profile for each audio stream and output.</p>
+<p>For details on the data fields of a loudness processing workflow, refer to the topic: [Loudness processing workflow fields explained](LoudnessProcessingWorkflowFields.md).</p>
+<p>The process for creating a new loudness processing workflow is outlined below:</p>
+<ul class="simple">
+<li>From the Dashboard, click the <strong>Create</strong> button to create a new loudness processing workflow</li>
+<li>Enter a name for the workflow</li>
+<li>Enter the Input details (UDP or ASI)</li>
+</ul>
+<img alt="_images/DashboardIPInputs.png" src="_images/DashboardIPInputs.png" />
+<img alt="_images/DashboardASIInputs.png" src="_images/DashboardASIInputs.png" />
+<ul class="simple">
+<li>Enter the Program IDs for the audio elementary streams to be processed for loudness normalization</li>
+<li>Select a loudness profile for each audio stream. This determines the loudness normalization parameters to be applied to each stream.</li>
+</ul>
+<img alt="_images/DashboardIPAudioStreams.png" src="_images/DashboardIPAudioStreams.png" />
+<ul class="simple">
+<li>Enter Output details (UDP or ASI)</li>
+</ul>
+<img alt="_images/DashboardIPOutputs.png" src="_images/DashboardIPOutputs.png" />
+<img alt="_images/DashboardASIOutputs.png" src="_images/DashboardASIOutputs.png" />
+</div>
+<div class="section" id="modify-a-loudness-processing-workflow">
+<h2>Modify a loudness processing workflow<a class="headerlink" href="#modify-a-loudness-processing-workflow" title="Permalink to this headline">¶</a></h2>
+<p>The process for modifying a loudness processing workflow is outlined below:</p>
+<ul class="simple">
+<li>From the Dashboard, click the <strong>Expand</strong> button to the right of the loudness processing workflow to be modified</li>
+<li>The workflow fields expand, allowing users to modify them</li>
+</ul>
+<img alt="_images/DashboardIPMini.png" src="_images/DashboardIPMini.png" />
+<ul class="simple">
+<li>Modify the fields as desired</li>
+<li>Click the <strong>Apply Changes</strong> button to save your changes.</li>
+</ul>
+</div>
+<div class="section" id="delete-a-loudness-processing-workflow">
+<h2>Delete a loudness processing workflow<a class="headerlink" href="#delete-a-loudness-processing-workflow" title="Permalink to this headline">¶</a></h2>
+<p>The process for deleting a loudness processing workflow is outlined below:</p>
+<ul class="simple">
+<li>From the Dashboard, click the <strong>Delete</strong> button to the right of the loudness processing workflow to be modified</li>
+</ul>
+<img alt="_images/DeleteButtonConfirm.png" src="_images/DeleteButtonConfirm.png" />
+<ul class="simple">
+<li>Click the <strong>Confirm</strong> popup to confirm that you want to delete the workflow</li>
+<li>The workflow is deleted.</li>
+</ul>
+<p><a class="reference external" href="LoudnessProcessingWorkflowFields.html">Click here to read an explanation of each of the fields in a loudness processing workflow</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loudnessprocessingworkflowfields.html" class="btn btn-neutral float-right" title="Loudness processing workflow fields explained" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dashboard.html" class="btn btn-neutral" title="The Dashboard" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Peter Enseleit.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

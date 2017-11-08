@@ -1,0 +1,4 @@
+rst_prolog = """
+.. |ARGO| replace:: Matrix BETTY
+.. |JUNO| replace:: Matrix FRED
+"""
