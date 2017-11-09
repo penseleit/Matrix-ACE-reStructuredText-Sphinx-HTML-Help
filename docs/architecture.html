@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Architecture &mdash; Matrix ACE 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Matrix ACE 1.0 documentation" href="index.html"/>
+        <link rel="next" title="Loudness processing explained" href="loudnessprocessingexplained.html"/>
+        <link rel="prev" title="Overview" href="overview.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Matrix ACE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ethernet-udp-ip-and-asi-input-output">Ethernet (UDP/IP) and ASI input/output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#audio-elementary-stream-loudness-processing">Audio elementary stream loudness processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#non-audio-elementary-streams-pass-through-untouched">Non-audio elementary streams pass-through untouched</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingexplained.html">Loudness processing explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuringmatrixace.html">Configuring Matrix ACE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.html">The Dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingworkflows.html">Loudness processing workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprocessingworkflowfields.html">Loudness processing workflow fields explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprofiles.html">Loudness profiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="loudnessprofilefields.html">Loudness profile fields explained</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usingmatrixace.html">Using Matrix ACE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencematerials.html">Reference materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="termscopyrightsandtrademarks.html">Terms, Copyrights and Trademarks</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Matrix ACE</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Architecture</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/architecture.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="architecture">
+<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ethernet-udp-ip-and-asi-input-output">
+<h2>Ethernet (UDP/IP) and ASI input/output<a class="headerlink" href="#ethernet-udp-ip-and-asi-input-output" title="Permalink to this headline">¶</a></h2>
+<p>The Matrix ACE software is installed onto server hardware with Ethernet and/or ASI card adaptors installed to provide input and output interfaces for the Transport Streams to be processed.</p>
+<a class="reference internal image-reference" href="_images/ACEHardwareDiag.png"><img alt="_images/ACEHardwareDiag.png" class="align-center" src="_images/ACEHardwareDiag.png" style="width: 800px;" /></a>
+</div>
+<div class="section" id="audio-elementary-stream-loudness-processing">
+<h2>Audio elementary stream loudness processing<a class="headerlink" href="#audio-elementary-stream-loudness-processing" title="Permalink to this headline">¶</a></h2>
+<p>Matrix ACE accepts a Single Program Transport Stream (SPTS) or Multiple Program Transport Stream (MPTS) as input, which then has each of its audio Elementary Streams split out by the Mediaware Transport Stream processing engine for processing by the loudness processor.</p>
+<p>The audio elementary streams are decoded, processed to match the configured loudness profile and re-encoded. The re-encoded audio elementary streams are then packetized and the packets are written into the exact byte positions in the output transport stream as the input packets had.</p>
+</div>
+<div class="section" id="non-audio-elementary-streams-pass-through-untouched">
+<h2>Non-audio elementary streams pass-through untouched<a class="headerlink" href="#non-audio-elementary-streams-pass-through-untouched" title="Permalink to this headline">¶</a></h2>
+<p>All non-audio elementary streams pass through untouched and without loss, and audio elementary streams are processed to conform to the configured loudness profiles without loss in quality.</p>
+<p>Multiple Programs (channels) within the transport stream can have their audio elementary streams processed for loudness simultaneously. Hardware specifications are the factor which limits the number of programs (channels) that can be processed by each server.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="loudnessprocessingexplained.html" class="btn btn-neutral float-right" title="Loudness processing explained" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Peter Enseleit.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
