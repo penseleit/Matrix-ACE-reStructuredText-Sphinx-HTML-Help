@@ -15,6 +15,8 @@ Each loudness processing workflow consists of:
 
 
 .. image:: images/Loudnessprocessingworkflowdiagram.png
+    :width: 640px
+    :align: center
 
 
 Input parameters

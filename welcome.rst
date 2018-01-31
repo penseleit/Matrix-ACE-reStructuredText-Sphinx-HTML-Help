@@ -1,8 +1,9 @@
-.. image:: images/|COMPANY|-MeshLogo-|COMPANY|Blue-72PPI.png
-
 ==========
 Welcome
 ==========
+
+.. image:: images/Mediaware-MeshLogo-MediawareBlue-150PPI.png
+    :width: 300px
 
 Welcome to |COMPANY|'s Matrix Audio Control Engine (Matrix ACE) Help.
 
@@ -18,7 +19,7 @@ Support
 
 For product support, please contact:
 
-Email: `support@|COMPANY|.com.au <mailto://support@|COMPANY|.com.au>`_.
+Email: `support@mediaware.com.au <mailto://support@mediaware.com.au>`_.
 
 Telephone: +61 2 6163 8700 (Australian Office Hours 9am - 5pm).
 

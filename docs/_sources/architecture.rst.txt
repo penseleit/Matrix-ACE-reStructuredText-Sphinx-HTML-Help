@@ -10,9 +10,9 @@ Ethernet (UDP/IP) and ASI input/output
 The Matrix ACE software is installed onto server hardware with Ethernet and/or ASI card adaptors installed to provide input and output interfaces for the Transport Streams to be processed.
 
 
-.. Image:: images/ACEHardwareDiag.png
-            :width: 800px
-            :align: center
+.. image:: images/ACEHardwareDiag.png
+        :width: 640px
+        :align: center
 
 
 Audio elementary stream loudness processing

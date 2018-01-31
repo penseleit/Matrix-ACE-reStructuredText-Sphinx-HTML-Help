@@ -32,7 +32,7 @@ import sphinx_rtd_theme
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc']
+extensions = ['sphinx.ext.autodoc','rinoh.frontend.sphinx',]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Matrix ACE'
-copyright = '2017, Peter Enseleit'
+copyright = '2017, Mediaware'
 author = 'Peter Enseleit'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -70,7 +70,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'demo.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -124,32 +124,36 @@ htmlhelp_basename = 'SphinxTestdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
+# rinohtype PDF converter settings
+rinoh_documents = [('index',            # top-level file (index.rst)
+                    'Matrix ACE User Guide',           # output (target.pdf)
+                    'Matrix ACE User Guide',   # document title
+                    'Mediaware',
+                    'manual',
+                    False)]   # document author
+
+rinoh_domain_indices = False
+rinoh_logo = 'images/Mediaware-MeshLogo-MediawareBlue-150PPI.png'
+rinoh_paper_size = 'A4'
+rinoh_stylesheet = 'sphinx_mw.rts'
+# rinoh_template = ''
+
 latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
+     'papersize': 'a4paper',
+     'fontpkg': '',
+     'fncychap': '',
+     'maketitle': '\\cover',
+     'pointsize': '',
+     'preamble': '',
+     'releasename': "",
+     'babel': '',
+     'printindex': '',
+     'fontenc': '',
+     'inputenc': '',
+     'classoptions': '',
+     'utf8extra': '',
 
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
 }
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'SphinxTest.tex', 'SphinxTest Documentation',
-     'Peter Enseleit', 'manual'),
-]
-
 
 # -- Options for manual page output ---------------------------------------
 
@@ -173,7 +177,7 @@ texinfo_documents = [
 ]
 
 rst_prolog = '''
-.. |COMPANY| replace:: Aerovironment
+.. |COMPANY| replace:: Mediaware
 .. |AEROVIRONMENT| replace:: Aerovironment
 .. |GENERALDYNAMICS| replace:: General Dynamics
 '''

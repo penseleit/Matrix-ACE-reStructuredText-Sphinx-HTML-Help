@@ -1,8 +1,9 @@
-.. image:: images/Mediaware-MeshLogo-MediawareBlue-72PPI.png
-
 ==========
 Welcome
 ==========
+
+.. image:: images/Mediaware-MeshLogo-MediawareBlue-150PPI.png
+    :width: 300px
 
 Welcome to |COMPANY|'s Matrix Audio Control Engine (Matrix ACE) Help.
 

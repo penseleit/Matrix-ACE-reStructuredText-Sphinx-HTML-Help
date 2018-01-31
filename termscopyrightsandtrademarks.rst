@@ -1,8 +1,9 @@
-.. image:: images/|COMPANY|-MeshLogo-|COMPANY|Blue-72PPI.png
-
 ================================
 Terms, Copyrights and Trademarks
 ================================
+
+.. image:: images/Mediaware-MeshLogo-MediawareBlue-150PPI.png
+    :width: 300px
 
 Terms and Conditions
 -----------------------

@@ -9,4 +9,4 @@ Configuration changes are applied to the running system in a manner which causes
 
 The Matrix ACE system is designed to operate unattended with minimal system downtime.
 
-If problems are encountered during the operation of Matrix ACE, please contact `|COMPANY| support <mailto://support@|COMPANY|.com.au>`_.
+If problems are encountered during the operation of Matrix ACE, please contact |COMPANY| `support <mailto://support@mediaware.com.au>`_.
